@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+}
+
+nav {
+  background-color: darkcyan;
+}
+
+#wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+a.menu {
+  display: inline-block;
+  width: 50%;
+  padding: 15px 30px;
+  color: black;
+  text-decoration: none;
+  text-align: center;
+}
+
+a.menu:hover {
+  background-color: darkred;
+}
+
+body {
+  background: #DCDCDC;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+figure {
+  margin: 0;
+}
+
+figcaption {
+  font-size: 20px;
+  color: grey;
+  line-height: 35px;
+}
+
+.grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 90%;
+  grid-gap: 30px;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  padding: 20px;
+  background: white;
+}
+
+@media all and (min-width: 600px) {
+  .grid {
+    grid-auto-flow: initial;
+    grid-template-columns: repeat(auto-fit, minmax(auto, 300px));
+    justify-content: center;
+  }
+}
+
+.grid__figure {
+  display: grid;
+  grid-template-rows: 200px 100px;
+}
+
+.grid__figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: solid black 1px;
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.grid__figure img figure:hover img {
+  -webkit-filter: blur(0);
+  filter: blur(0);
+}
